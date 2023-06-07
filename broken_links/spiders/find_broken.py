@@ -2,7 +2,6 @@ from urllib.parse import urlparse
 
 import scrapy
 from scraper_helper import headers, run_spider
-from twisted.internet.error import DNSLookupError
 
 START_PAGE = 'https://www.scrapebay.com'
 
@@ -61,7 +60,7 @@ class FindBrokenSpider(scrapy.Spider):
                 yield scrapy.Request(link, cb_kwargs={
                     'source': response.url,
                     'text': text
-                },errback=self.handle_error)
+                }, errback=self.handle_error)
             else:
                 yield scrapy.Request(link, cb_kwargs={
                     'source': response.url,
