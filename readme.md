@@ -18,4 +18,4 @@ scrapy crawl find_broken -o output_file.csv
 
 ## Video Walkthrough
 
-Visit https://youtube.com/@coderecode 
+Visit https://www.youtube.com/watch?v=dmtHyl8nLMI
